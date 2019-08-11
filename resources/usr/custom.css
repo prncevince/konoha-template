@@ -1,0 +1,72 @@
+/* TITLE SLIDE */
+
+
+.title-slide { /* dims of (1920 x 1279) AND (2206 x 2557) */
+    /* background-image: url(./static/img/rmd-title-1.jpg), url(./static/img/rmarkdown.png);
+    background-size: cover, 20%;
+    background-position: top, 1em 90%; */
+    background-image: url(./static/img/logo.png), url(./static/img/title.jpg);
+    background-size: 20%, cover;
+    background-position: 1em 90%, top;
+    padding: 1em;
+}
+
+/* title */
+
+.title-slide h1.title {
+    margin: 0;
+}
+
+/* author */
+
+.title-slide .author {
+    text-align: right;
+    position: absolute;
+    right: calc((20/35)*1em);
+    bottom: 0;
+}
+
+/* no number */
+
+.title-slide .remark-slide-number {
+    display: none;
+}
+
+/* topic icon  */
+
+img.topic {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 20%;
+}
+
+/* series footer */
+
+div.my-footer {
+    background-color: #000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: calc(1em+2px);
+    width: 12em;
+}
+
+div.my-footer span {
+    font-size: 10pt;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 2px;
+}
+
+/* .title-slide .footnote {
+    right: 0;
+} */
+
+/* .remark-slide-content {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  padding-right: 10px;
+} */

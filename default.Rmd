@@ -1,0 +1,68 @@
+---
+title: "R Markdown Part I - Introduction"
+subtitle: "⚔<br/>with xaringan"
+author: "Vincent Clemson"
+date: "2019/05/04 (updated: `r Sys.Date()`)"
+output:
+  xaringan::moon_reader:
+    seal: false
+    css: [resources/src/css/default.css,
+          resources/src/css/default-fonts.css, 
+          resources/usr/custom.css]
+    chakra: resources/src/js/remark.min.js
+    lib_dir: resources/libs
+    nature:
+      ratio: 16:10
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      navigation:
+        scroll: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(fig.path = "resources/usr/static/img/")
+```
+
+```{asis notes, include=FALSE}
+.footnote[vincent clemson]
+<div class="my-footer"><span>modernizing the m&a workflow</span></div>
+# R Markdown Part I - Introduction
+.author[### vincent clemson]
+
+When a `.class` is on it\'s own, it creates a `div` tag.
+When a `.class` is inside a `#` header, it creates a `span` tag.
+```
+
+layout: true
+
+.my-footer[
+  <span>modernizing the m&a workflow</span>
+]
+
+
+
+---
+
+class: title-slide, inverse
+
+<h1 class="title">R Markdown Part I - Introduction</h1>
+
+<h3 class="author">vincent clemson</h3>
+
+<img class="topic" src="resources/usr/static/img/rmarkdown.png">
+
+
+---
+
+class: middle, center
+
+.pull-left.right[
+# dewd
+]
+
+.pull-right.left[
+# what
+]
+---
