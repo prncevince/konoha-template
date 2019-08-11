@@ -1,8 +1,8 @@
 ---
-title: "R Markdown Part I - Introduction"
+title: "Localized static presentation - default Xaringan"
 subtitle: "⚔<br/>with xaringan"
 author: "Vincent Clemson"
-date: "2019/05/04 (updated: `r Sys.Date()`)"
+date: "2019/08/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
@@ -47,7 +47,7 @@ layout: true
 
 class: title-slide, inverse
 
-<h1 class="title">R Markdown Part I - Introduction</h1>
+<h1 class="title">Localized static presentation - default Xaringan</h1>
 
 <h3 class="author">vincent clemson</h3>
 
