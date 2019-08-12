@@ -6,11 +6,11 @@ date: "2019/08/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
-    css: [resources/src/css/default.css,
-          resources/src/css/default-fonts.css, 
-          resources/usr/custom.css]
-    chakra: resources/src/js/remark.min.js
-    lib_dir: resources/libs
+    css: [theme/src/css/default.css,
+          theme/src/css/default-fonts.css, 
+          theme/usr/custom.css]
+    chakra: theme/src/js/remark.min.js
+    lib_dir: libs
     nature:
       ratio: 16:10
       highlightStyle: github
@@ -22,7 +22,7 @@ output:
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
-knitr::opts_chunk$set(fig.path = "resources/usr/static/img/")
+knitr::opts_chunk$set(fig.path = "assets/img/")
 ```
 
 ```{asis notes, include=FALSE}
@@ -51,7 +51,7 @@ class: title-slide, inverse
 
 <h3 class="author">vincent clemson</h3>
 
-<img class="topic" src="resources/usr/static/img/rmarkdown.png">
+<img class="topic" src="assets/img/rmarkdown.png">
 
 
 ---
