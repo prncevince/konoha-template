@@ -1,12 +1,12 @@
 ---
-title: "Localized static presentation - default Xaringan"
+title: "R Markdown Part I - Introduction - Kunoichi Theme"
 subtitle: "⚔<br/>with xaringan"
 author: "Vincent Clemson"
 date: "2019/08/11 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
-    css: [theme/src/css/default.css,
+    css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css,
           theme/src/css/default-fonts.css, 
           theme/usr/custom.css]
     chakra: theme/src/js/remark.min.js
@@ -47,7 +47,7 @@ layout: true
 
 class: title-slide, inverse
 
-<h1 class="title">Localized static presentation - default Xaringan</h1>
+<h1 class="title">R Markdown Part I - Introduction - Kunoichi Theme</h1>
 
 <h3 class="author">vincent clemson</h3>
 
