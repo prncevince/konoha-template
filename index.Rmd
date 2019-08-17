@@ -1,8 +1,8 @@
 ---
-title: "R Markdown Part I - Introduction - Kunoichi Theme"
+title: "Version Control Repository Management Service"
 subtitle: "⚔<br/>with xaringan"
 author: "Vincent Clemson"
-date: "2019/08/11 (updated: `r Sys.Date()`)"
+date: "2019/08/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
