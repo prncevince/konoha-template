@@ -1,7 +1,9 @@
 # Starting from scratch & Build
 #
 #`git clone --recursive git@esgovcloud.com:mAndA/mod-mAndA-template.git`
+#`git remote remove origin`
 #`git remote add origin git@url`
+#`cd theme && git checkout master`
 #make changes
 xaringan::inf_mr()
 #add & commit changes
@@ -15,11 +17,12 @@ xaringan::inf_mr()
 fs::dir_copy(path = 'theme/src', 'dist/src')
 fs::dir_copy(path = 'theme/usr', 'dist/usr')
 xaringan::moon_reader()
-#`git push`
+#`git push --recurse-submodules=check`
+#`cd theme && git push` OR `cd theme && git push --recursive-submodules=on-demand`
 
 # Git Submodule workflow
 #
-#
+# mostly covered above
 
 #Unfortunately, we cannot set the `extra_dependencies` argument in xaringan because
 #it utilizes the arguments of BOTH rmarkdown::html_document() & html_document_base()
