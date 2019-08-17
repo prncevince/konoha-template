@@ -74,7 +74,7 @@ class: title-slide inverse
 
 <h3 class="author">vincent clemson</h3>
 
-<img class="topic" src="assets/img/rmarkdown.png">
+<img class="topic" src="assets/img/topic.png">
 
 
 ---
