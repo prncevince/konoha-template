@@ -6,7 +6,7 @@ date: "2019/08/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
-    css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css,
+    css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css, theme/src/css/ninpo.css,
           theme/src/css/default-fonts.css, 
           theme/usr/custom.css]
     chakra: theme/src/js/remark.min.js
@@ -26,21 +26,33 @@ knitr::opts_chunk$set(fig.path = "assets/img/")
 ```
 
 ```{asis notes, include=FALSE}
-.footnote[vincent clemson]
-<div class="my-footer"><span>modernizing the m&a workflow</span></div>
-# R Markdown Part I - Introduction
-.author[### vincent clemson]
+# NOTES:
 
-When a `.class` is on its own, it creates a `div` tag.
-When a `.class` is inside a `#` header, it creates a `span` tag.
+# This template file for the R Markdown that generates the
+# "Modernizing the M&A Workflow" series uses the Xaringan R Markdown HTML extension.
+# In addition, we are using a customized version of the combined Kunoichi/Ninjutsu
+# themes created by Emi Tanaka.
+# Demo: https://emitanaka.org/ninja-theme/themes/kunoichi/kunoichi-theme-example.html 
+# Repo: https://github.com/emitanaka/ninja-theme
 
-For kunoichi, need to add footer NOT as <div></div>
+# This "theme" that we use is a "git submodule" within this main superproject 
+# Theme git submodule repo: https://esgovcloud.com/mAndA/mod-mAndA-theme
 
+# This template and the theme are separate repositories because both projects can be 
+# worked on separately
+
+# To read more on git submodules, please visit:
+# https://medium.com/fiverr-engineering/working-with-git-submodules-ec6210801e07
+# http://dan.mccloy.info/2015/06/11/Git-submodules/
+# https://bookdown.org/yihui/blogdown/version-control.html
+# https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
+# https://git-scm.com/book/en/v2/Git-Tools-Submodules
+
+# For ninjutsu, need to add footer NOT as <div></div>
+# Old footer
 .my-footer[
   <span>modernizing the m&a workflow</span>
 ]
-
-
 ```
 
 layout: true
@@ -51,7 +63,7 @@ layout: true
 
 class: title-slide inverse
 
-<h1 class="title">R Markdown Part I - Introduction - Kunoichi Theme</h1>
+<h1 class="title">Modern M&A - Custom Kunoichi/Ninjutsu Theme</h1>
 
 <h3 class="author">vincent clemson</h3>
 
