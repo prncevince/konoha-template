@@ -32,7 +32,7 @@ xaringan::moon_reader()
 #   HEAD of remote repo 
 #`git commit -am "Remove .gitmodules file - break gitlink"`
 #`git push --all` --> deploy site (pushing both branches)
-#`git revert HEAD~1` --> Revert gh-pages to previous commit
+#`git revert HEAD` --> Revert gh-pages branch to previous commit
 #   now you can checkout master & merge future changes into gh-pages with no conflict
 #   YAY!
 
