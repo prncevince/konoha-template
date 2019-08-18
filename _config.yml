@@ -2,4 +2,4 @@ exclude:
   - README.md
   - build.R
   - index.Rmd
-  - *.Rproj
+  - "*.Rproj"
