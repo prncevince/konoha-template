@@ -9,7 +9,7 @@ xaringan::inf_mr()
 #add & commit changes
 #`git push -u origin master`
 
-# Building website & Deploy
+# Building static web content files
 #
 # This allows us to source the filesystem in the main superproject when in the remote
 # repo. The magic is all in build command below AND the index.Rmd YALM!
@@ -18,11 +18,23 @@ fs::dir_copy(path = 'theme/src', 'dist/src')
 fs::dir_copy(path = 'theme/usr', 'dist/usr')
 xaringan::moon_reader()
 #`git push --recurse-submodules=check`
-#`cd theme && git push` OR `cd theme && git push --recursive-submodules=on-demand`
+#`cd theme && git push` OR `git push --recursive-submodules=on-demand`
 
 # Git Submodule workflow
 #
-# mostly covered above
+# to pull in updates from the Submodule Remote Repo
+#`git submodule update --remote`
+
+# Deploy site & Setup GitHub Pages Enterprise directory structure
+#
+#`git checkout -b gh-pages` --> branch that GitHub clones site from
+#`git rm .gitmodules` --> remove "gitlink" from branch, this will break link to submodule 
+#   HEAD of remote repo 
+#`git commit -am "Remove .gitmodules file - break gitlink"`
+#`git push --all` --> deploy site (pushing both branches)
+#`git revert HEAD~1` --> Revert gh-pages to previous commit
+#   now you can checkout master & merge future changes into gh-pages with no conflict
+#   YAY!
 
 #Unfortunately, we cannot set the `extra_dependencies` argument in xaringan because
 #it utilizes the arguments of BOTH rmarkdown::html_document() & html_document_base()
@@ -32,6 +44,3 @@ xaringan::moon_reader()
 
 # Making updates to the theme should be done DIRECTLY to the theme directory 
 # i.e. the git submodule
-
-# setup GitHub Pages enterprise directory structure
-#`currently NOTHING woop!`
