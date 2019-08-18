@@ -1,9 +1,10 @@
 # Starting from scratch & Build
 #
-#`git clone --recursive git@esgovcloud.com:mAndA/mod-mAndA-template.git`
+#`git clone --recursive --single-branch -b master git@url`
 #`git remote remove origin`
 #`git remote add origin git@url`
 #`cd theme && git checkout master`
+#`mv n-repo-name.Rproj new-name.Rproj`
 #make changes
 xaringan::inf_mr()
 #add & commit changes
