@@ -9,3 +9,7 @@ In addition, this template contains a [git submodule](https://git-scm.com/docs/g
 ## Clone
 
 `git clone --recursive git@url`
+
+## Building Presentation
+
+Please see [build.R](build.R)
