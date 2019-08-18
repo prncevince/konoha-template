@@ -30,7 +30,7 @@ xaringan::moon_reader()
 #`git checkout -b gh-pages` --> branch that GitHub clones site from
 #`git rm .gitmodules` --> remove "gitlink" from branch, this will break link to submodule 
 #   HEAD of remote repo 
-#`git commit -am "Remove .gitmodules file - break gitlink"`
+#`git commit -m "Remove .gitmodules file - break gitlink"`
 #`git push --all` --> deploy site (pushing both branches)
 #`git revert HEAD` --> Revert gh-pages branch to previous commit
 #   now you can checkout master & merge future changes into gh-pages with no conflict
