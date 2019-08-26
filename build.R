@@ -5,7 +5,7 @@
 #`git remote add origin git@url`
 #`cd theme && git checkout master`
 #make changes
-xaringan::inf_mr() #xaringan::moon_reader()
+xaringan::inf_mr() #rmarkdown::render('index.Rmd', 'xaringan::moon_reader')
 #
 #add & commit changes
 #
