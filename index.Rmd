@@ -1,17 +1,14 @@
 ---
 title: "Modern M&A - Custom Xaringan Theme"
 subtitle: "⚔<br/>with xaringan"
-author: "Vincent Clemson"
+author: "The Authors Names ... just meta-data"
 date: "2019/08/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
     css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css,
-          theme/src/css/ninpo.css,
-          theme/usr/custom.css, theme/src/css/default-fonts.css,
-          dist/src/css/kunoichi.css, dist/src/css/ninjutsu.css,
-          dist/src/css/ninpo.css,
-          dist/usr/custom.css, dist/src/css/default-fonts.css]
+          theme/src/css/ninpo.css, theme/src/css/deck.css,
+          theme/usr/custom.css, theme/src/css/default-fonts.css]
     chakra: dist/src/js/remark.min.js
     lib_dir: libs
     nature:

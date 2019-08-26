@@ -1,10 +1,11 @@
+
+
 # Starting from scratch & Build
 #
 #`git clone --recursive --single-branch -b master git@url`
 #`git remote remove origin`
 #`git remote add origin git@url`
 #`cd theme && git checkout master`
-#`mv n-repo-name.Rproj new-name.Rproj`
 #make changes
 xaringan::inf_mr()
 #add & commit changes
@@ -13,13 +14,20 @@ xaringan::inf_mr()
 # Building static web content files
 #
 # This allows us to source the filesystem in the main superproject when in the remote
-# repo. The magic is all in build command below AND the index.Rmd YALM!
+# repo. The magic is all in the build commands below AND the index.Rmd YAML!
 # (multiple stylesheet paths) 
-fs::dir_copy(path = 'theme/src', 'dist/src')
-fs::dir_copy(path = 'theme/usr', 'dist/usr')
+library(magrittr)
+index_nodeset <- xml2::read_html(x = 'index.html')
+link_nodeset <- index_nodeset %>% rvest::html_nodes('head link')
+list(link_nodeset, link_nodeset %>% xml2::xml_attr(attr = "href") %>% sub(pattern = "theme/", replacement = "dist/"))  %>% 
+  purrr::pwalk(xml2::xml_set_attr, attr = "href")
+xml2::write_html(x = index_nodeset, file = "index.html")
+
+file.copy(from = 'theme/src', 'dist', recursive = T)
+file.copy(from = 'theme/usr', 'dist', recursive = T)
 xaringan::moon_reader()
 #`git push --recurse-submodules=check`
-#`cd theme && git push` OR `git push --recursive-submodules=on-demand`
+#`cd theme && git push` OR `git push --recurse-submodules=on-demand`
 
 # Git Submodule workflow
 #
