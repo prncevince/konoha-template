@@ -69,7 +69,7 @@ list(css_nodeset, css_nodeset %>% xml2::xml_attr(attr = "href") %>%
 js_nodeset <- index_nodeset %>% rvest::html_nodes('body script') %>% `[`(1)
 list(js_nodeset, js_nodeset %>% xml2::xml_attr(attr = "src") %>% 
        sub(pattern = "theme/", replacement = "dist/"))  %>% 
-  purrr::pwalk(xml2::xml_set_attr, attr = "href")
+  purrr::pwalk(xml2::xml_set_attr, attr = "src")
 xml2::write_html(x = index_nodeset, file = "index.html")
 file.copy(from = 'theme/src', 'dist', recursive = T)
 file.copy(from = 'theme/usr', 'dist', recursive = T)
