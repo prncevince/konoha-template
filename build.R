@@ -73,6 +73,7 @@ file.copy(from = 'theme/usr', 'dist', recursive = T)
 # Again, choose 1 of 2:
 #
 #(1) starting from scratch: 
+#git add .
 #`git rm .gitmodules` --> remove "gitlink" from branch
 # this will break link to submodule HEAD of remote repo 
 #`git commit -am "Build webpage files & Remove .gitmodules file - break gitlink"`
@@ -81,6 +82,7 @@ file.copy(from = 'theme/usr', 'dist', recursive = T)
 # allows you to checkout master & merge future changes into gh-pages with no conflict
 #   YAY!
 #(2) collaborating on a pre-existing repo/presentation:
+#git add .
 #`git commit -am "Build webpage files"`
 #`git push --all` --> deploy site (pushing both branches)
 #`git revert HEAD` --> Revert gh-pages branch to previous commit
