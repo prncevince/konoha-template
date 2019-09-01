@@ -78,12 +78,13 @@ file.copy(from = 'theme/usr', 'dist', recursive = T)
 #`git commit -am "Build webpage files & Remove .gitmodules file - break gitlink"`
 #`git push --all` --> deploy site (pushing both branches)
 #`git revert HEAD` --> Revert gh-pages branch to previous commit
-#   now you can checkout master & merge future changes into gh-pages with no conflict
+# allows you to checkout master & merge future changes into gh-pages with no conflict
 #   YAY!
 #(2) collaborating on a pre-existing repo/presentation:
 #`git commit -am "Build webpage files"`
 #`git push --all` --> deploy site (pushing both branches)
-#   now you can checkout master & merge future changes into gh-pages with no conflict
+#`git revert HEAD` --> Revert gh-pages branch to previous commit
+# allows you to checkout master & merge future changes into gh-pages with no conflict
 
 #### _ ####
 # Comments ####
