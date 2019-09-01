@@ -9,7 +9,7 @@ output:
     css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css,
           theme/src/css/ninpo.css, theme/src/css/deck.css,
           theme/usr/custom.css, theme/src/css/default-fonts.css]
-    chakra: dist/src/js/remark.min.js
+    chakra: theme/src/js/remark.min.js
     lib_dir: libs
     nature:
       ratio: 16:10

@@ -62,9 +62,13 @@
 # Before this, we change the html <link> elements (using R) to avoid conflicts.
 library(magrittr)
 index_nodeset <- xml2::read_html(x = 'index.html')
-link_nodeset <- index_nodeset %>% rvest::html_nodes('head link')
-list(link_nodeset, link_nodeset %>% xml2::xml_attr(attr = "href") %>% 
-  sub(pattern = "theme/", replacement = "dist/"))  %>% 
+css_nodeset <- index_nodeset %>% rvest::html_nodes('head link')
+list(css_nodeset, css_nodeset %>% xml2::xml_attr(attr = "href") %>% 
+       sub(pattern = "theme/", replacement = "dist/"))  %>% 
+  purrr::pwalk(xml2::xml_set_attr, attr = "href")
+js_nodeset <- index_nodeset %>% rvest::html_nodes('body script') %>% `[`(1)
+list(js_nodeset, js_nodeset %>% xml2::xml_attr(attr = "src") %>% 
+       sub(pattern = "theme/", replacement = "dist/"))  %>% 
   purrr::pwalk(xml2::xml_set_attr, attr = "href")
 xml2::write_html(x = index_nodeset, file = "index.html")
 file.copy(from = 'theme/src', 'dist', recursive = T)
