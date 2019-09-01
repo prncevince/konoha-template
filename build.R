@@ -51,6 +51,7 @@
 #
 #(2) collaborating on a pre-existing repo/presentation:
 #`git checkout gh-pages`
+#`git merge master`
 #
 #build step --> building static web content files ####
 #
