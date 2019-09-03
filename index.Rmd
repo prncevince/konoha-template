@@ -78,11 +78,11 @@ class: title-slide inverse
 
 class: split-two
 
-.column.bg-main1[.content.vmiddle.right[
+.column.bg-main1[.content.vtop-40.right[
 # dewd
 ]]
 
-.column.bg-main2[.content.vmiddle[
+.column.bg-main2[.content.vbottom-40[
 # what
 ]]
 ---
