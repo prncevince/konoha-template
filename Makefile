@@ -5,10 +5,10 @@ all: $(GENERATED_FILES)
 .PHONY: all build deploy cleandist pdf
 
 index.html: index.Rmd
-	R --slave -e rmarkdown::render('index.Rmd', 'xaringan::moon_reader')
+	R --slave -e "rmarkdown::render('index.Rmd', 'xaringan::moon_reader')"
 
 extra.html: extra.Rmd
-	R --slave -e rmarkdown::render('extra.Rmd', 'xaringan::moon_reader')
+	R --slave -e "rmarkdown::render('extra.Rmd', 'xaringan::moon_reader')"
 
 build:
 	git checkout gh-pages
