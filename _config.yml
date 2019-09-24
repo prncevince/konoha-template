@@ -3,3 +3,7 @@ exclude:
   - build.R
   - index.Rmd
   - "*.Rproj"
+  - pdf/
+  - extra.Rmd
+  - extra.html
+  - Makefile
