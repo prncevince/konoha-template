@@ -54,7 +54,7 @@ The [`Makefile`](Makefile) in this repo does the magic here. Because there are r
 
 Knit Xaringan slides:
 
-- `make`
+- `make` OR `make all`
 
 Export Slides to PDF:
 
