@@ -1,14 +1,15 @@
-GENERATED_FILES = index.html extra.html
+.PHONY: all knit build deploy cleandist pdf
 
-all: $(GENERATED_FILES)
+GENERATED_FILES = index.html
 
-.PHONY: all build deploy cleandist pdf
+knit: $(GENERATED_FILES)
+
+all: knit build deploy cleandist
+
+pages: build deploy cleandist
 
 index.html: index.Rmd
 	R --slave -e "rmarkdown::render('index.Rmd', 'xaringan::moon_reader')"
-
-extra.html: extra.Rmd
-	R --slave -e "rmarkdown::render('extra.Rmd', 'xaringan::moon_reader')"
 
 build:
 	git checkout gh-pages
@@ -18,12 +19,15 @@ build:
 	git add .
 	git commit -am "Setup GitHub Pages"
 
-deploy: build
+deploy:
 	git push --all --recurse-submodules=on-demand
-	
-cleandist: deploy
+
+cleandist:
 	git revert --no-edit HEAD
 	git checkout master
+
+extra.html: extra.Rmd
+	R --slave -e "rmarkdown::render('extra.Rmd', 'xaringan::moon_reader')"
 
 pdf:
 	Rscript --slave \

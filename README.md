@@ -54,7 +54,7 @@ The [`Makefile`](Makefile) in this repo does the magic here. Because there are r
 
 Knit Xaringan slides:
 
-- `make` OR `make all`
+- `make` OR `make knit`
 
 Export Slides to PDF:
 
@@ -62,4 +62,8 @@ Export Slides to PDF:
 
 Build slides, Deploy site, and Cleanup gh-pages branch in 1 shot:
 
-- `make cleandist`
+- `make pages`
+
+Knit Xaringan slides **& then** `make pages` step above:
+
+- `make all`
