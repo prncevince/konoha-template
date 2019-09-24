@@ -3,16 +3,16 @@
 build:
 	git checkout gh-pages
 	git commit -am "Update theme"
-	git merge -X theirs master
+	git merge --no-edit -X theirs master
 	R --slave -f build.R
-
-deploy: build
 	git add .
 	git commit -am "Setup GitHub Pages"
+
+deploy: build
 	git push --all --recurse-submodules=on-demand
 	
 cleandist: deploy
-	git revert HEAD
+	git revert --no-edit HEAD
 	git checkout master
 
 pdf:
