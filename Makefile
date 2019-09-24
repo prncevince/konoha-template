@@ -3,6 +3,7 @@
 build:
 	git checkout gh-pages
 	git commit -am "Update theme"
+	git merge -X theirs master
 	R --slave -f build.R
 
 deploy: build

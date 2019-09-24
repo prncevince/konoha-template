@@ -1,0 +1,22 @@
+/* Specific to THIS slide deck */
+/* contains overwrites & stuff */
+
+/* Series Map */
+
+.column:first-of-type .row.jamstack-3:hover,
+.column:first-of-type .row.rmd-ii-4:hover,
+.column:first-of-type .row.vc-git-5:hover,
+.column:nth-of-type(2) .row.notebooks-6:hover,
+.column:nth-of-type(2) .row.browser-7:hover,
+.column:nth-of-type(2) .row.repro-envs-8:hover,
+.column:nth-of-type(2) .row.viz-9:hover,
+.column:nth-of-type(3) .row.rpkgs-10:hover,
+.column:nth-of-type(3) .row.paas-11:hover,
+.column:nth-of-type(3) .row.next-12:hover {
+  opacity: 1;
+}
+
+.vcrms-1 a:hover,
+.rmd-i-2 a:hover {
+  color: #acacac;
+}
