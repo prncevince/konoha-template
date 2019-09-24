@@ -6,9 +6,10 @@ date: "2019/08/16 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
     seal: false
-    css: [theme/src/css/kunoichi.css, theme/src/css/ninjutsu.css,
-          theme/src/css/ninpo.css, theme/src/css/deck.css,
-          theme/usr/custom.css, theme/src/css/default-fonts.css]
+    css: [theme/src/css/kunoichi.css,       theme/src/css/ninjutsu.css,
+          theme/src/css/ninpo.css,          theme/src/css/default.css,
+          theme/src/css/default-fonts.css,  theme/src/css/custom-fonts.css,
+          theme/usr/css/custom.css,         assets/css/deck.css]
     chakra: theme/src/js/remark.min.js
     lib_dir: libs
     nature:
@@ -23,14 +24,17 @@ output:
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
 knitr::opts_chunk$set(fig.path = "assets/img/")
+library(anicon)
 ```
 
 ```{asis notes, include=FALSE}
 # NOTES:
 
 # This is the template file for the R Markdown that generates the
-# "Modernizing the M&A Workflow" series. It uses the Xaringan R Markdown HTML extension.
-# In addition, we are using a customized version of the combined Kunoichi/Ninjutsu/Ninpo
+# "Modernizing the M&A Workflow" series (mod-mAndA for short). 
+# It uses the Xaringan R Markdown HTML extension.
+# In addition, we are using a customized theme
+# Particularly, custom CSS in combination with the Kunoichi/Ninjutsu/Ninpo
 # themes created by Emi Tanaka.
 # Demo: https://emitanaka.org/ninja-theme/themes/kunoichi/kunoichi-theme-example.html 
 # Repo: https://github.com/emitanaka/ninja-theme
@@ -39,7 +43,10 @@ knitr::opts_chunk$set(fig.path = "assets/img/")
 # Theme remote repo: https://esgovcloud.com/mAndA/mod-mAndA-theme
 
 # This template and the theme are separate repositories because both projects can be 
-# worked on separately
+# worked on separately.
+
+# The theme is constantly being developed throughout the mod-mAndA series.
+# It is intended to become a useful Xaringan theme for creating html5 presentations.
 
 # To read more on git submodules, please visit:
 # http://manpages.ubuntu.com/manpages/trusty/man1/git-submodule.1.html
@@ -50,13 +57,6 @@ knitr::opts_chunk$set(fig.path = "assets/img/")
 # https://bookdown.org/yihui/blogdown/version-control.html
 # https://chrisjean.com/git-submodules-adding-using-removing-and-updating/
 # https://git-scm.com/book/en/v2/Git-Tools-Submodules
-
-
-# For ninjutsu, need to add footer NOT as <div></div>
-# Old footer  
-.my-footer[
-  <span>modernizing the m&a workflow</span>
-]
 ```
 
 layout: true
