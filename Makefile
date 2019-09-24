@@ -13,7 +13,7 @@ index.html: index.Rmd
 
 build:
 	git checkout gh-pages
-	git diff-index --quiet HEAD | git commit -am "Update theme"
+	git diff-index --quiet HEAD || git commit -am "Update theme"
 	git merge --no-edit -X theirs master
 	R --slave -f build.R
 	git add .
