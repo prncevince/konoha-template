@@ -22,11 +22,17 @@ The repo for the theme is located at [mAndA/mod-mAndA-theme](https://esgovcloud.
 
 To get started working on a new presentation:
 
-- `git clone git@esgovcloud.com:mAndA/mod-mAndA-template.git`
+- `git clone --recursive git@esgovcloud.com:mAndA/mod-mAndA-template.git`
 
 ## Setup
 
 Initially, a few manual maintenance commands need to be run.
+
+### Checkout theme's `master` branch
+
+The git clone command clone's the theme submodule at the HEAD position. We need to checkout the master (making sure to `cd` back to the superproject's main directory for the next step).
+
+- `cd theme && git checkout master && cd ..`
 
 ### Adding New Remote
 
@@ -35,6 +41,11 @@ To make this a repo for the new presentation page:
 - `git remote remove origin`
 - `git remote add origin git@url` (git@url of NEW project)
 
+### Set Upstream branch
+
+This allows us to use the `make` commands below for pushing initially.
+
+- git branch -u origin/master
 
 ### Break gitlink in gh-pages branch
 
@@ -48,7 +59,19 @@ To break the gitlink:
 - `git rm .gitmodules`
 - `git commit -m "Remove gitlink to theme submodule"`
 
-## Building, Deploying, exporting PDFs
+## Xaringan Knitting
+
+Xaringan Slides are built into a static website using R Markdown. We name our R Markdown file [index.Rmd](index.Rmd) so that the GitHub Pages Jekyll build engine recognizes it as the index to our site.
+
+Knitting the slides is as simple as:
+
+- `rmarkdown::render('index.Rmd', 'xaringan::moon_reader')`
+
+**OR** to perform continual development on the slides, the Xaringan package provides an RStudio addin that serves them locally & refreshes the page on saved changes using:
+
+- `xaringan::inf_mr()`
+
+## Building, Deploying, & exporting PDFs
 
 The [`Makefile`](Makefile) in this repo does the magic here. Because there are repetitive tasks required to build, deploy, save, test, and export the slides, we can use [GNU make](https://www.gnu.org/software/make/manual/make.html) to perform these reproducible procedures.
 
@@ -67,3 +90,24 @@ Build slides, Deploy site, and Cleanup gh-pages branch in 1 shot:
 Knit Xaringan slides **& then** `make pages` step above:
 
 - `make all`
+
+## Theme Submodule Workflow
+
+The theme is a [git submodule](https://git-scm.com/docs/gitsubmodules). The benefit of this is that it allows us to continually develop the theme throughout the creation of the series. A submodule is simply a repository inside a main super project/repository.
+
+Thus, when `cd`'d into the local git submodule directory, all git commands only apply to the submodule.
+Thus, commands such as `git push` & `git pull` made to pull-in new changes from the remote to the local and make updates to the remote from the local are perfectly fine to make.
+
+When NOT `cd`'d into the git submodule directory (i.e. outside the submodule directory & still inside the main project directory), git commands are performed differently.
+
+Pulling in updates can be made via:
+
+- `git submodule foreach git pull`
+
+Pushing the current branch AND the submodule (submodule 1st):
+
+- `git push --recurse-submodules=on-demand`
+
+Pushing the current branch ONLY IF the submodule has already been pushed before it (i.e. there are no changes to push upstream):
+
+- `git push --recurse-submodules=check`
