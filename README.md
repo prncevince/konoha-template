@@ -45,7 +45,7 @@ To make this a repo for the new presentation page:
 
 This allows us to use the `make` commands below for pushing initially.
 
-- git branch -u origin/master
+- `git branch -u origin/master`
 
 ### Break gitlink in gh-pages branch
 
@@ -92,6 +92,10 @@ Knit Xaringan slides **& then** `make pages` step above:
 - `make all`
 
 ## Theme Submodule Workflow
+
+The theme's repository:
+    
+    - https://esgovcloud.com/mAndA/mod-mAndA-theme
 
 The theme is a [git submodule](https://git-scm.com/docs/gitsubmodules). The benefit of this is that it allows us to continually develop the theme throughout the creation of the series. A submodule is simply a repository inside a main super project/repository.
 
