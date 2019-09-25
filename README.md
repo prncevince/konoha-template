@@ -95,7 +95,7 @@ Knit Xaringan slides **& then** `make pages` step above:
 
 The theme's repository:
     
-    - https://esgovcloud.com/mAndA/mod-mAndA-theme
+- https://esgovcloud.com/mAndA/mod-mAndA-theme
 
 The theme is a [git submodule](https://git-scm.com/docs/gitsubmodules). The benefit of this is that it allows us to continually develop the theme throughout the creation of the series. A submodule is simply a repository inside a main super project/repository.
 
