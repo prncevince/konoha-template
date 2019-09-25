@@ -41,12 +41,6 @@ To make this a repo for the new presentation page:
 - `git remote remove origin`
 - `git remote add origin git@url` (git@url of NEW project)
 
-### Set Upstream branch
-
-This allows us to use the `make` commands below for pushing initially.
-
-- `git branch -u origin/master`
-
 ### Break gitlink in gh-pages branch
 
 A git submodule needs a "gitlink" to work correctly.
@@ -55,9 +49,18 @@ However, to perform the build procedure for these slides, the gitlink must be br
 
 To break the gitlink:
 
-- `git checkout gh-pages`
+- `git checkout -b gh-pages`
 - `git rm .gitmodules`
 - `git commit -m "Remove gitlink to theme submodule"`
+- `git checkout master`
+
+### Set Upstream branch
+
+This will allow us to use the `make` commands below for pushing initially.
+Once you've made the initially changes that you want to the project, go ahead and:
+
+- `git push -u origin master`
+
 
 ## Xaringan Knitting
 
