@@ -39,9 +39,19 @@ The git clone command clone's the theme submodule at the HEAD position. We need 
 To make this a repo for the new presentation page:
 
 - `git remote remove origin`
-- `git remote add origin git@url` (git@url of NEW project)
+- `git remote add origin git@url` (`git@url` of NEW project)
 
-### Break gitlink in gh-pages branch
+### Fresh Commit History
+
+You can delete the old commit history that went into building the template to start things fre$h:
+
+- `git checkout --orphan temp_branch`
+- `git add .`
+- `git commit -am "Create presentaton message"`
+- `git branch -D master`
+- `git branch -m master`
+
+## Break gitlink in gh-pages branch
 
 A git submodule needs a "gitlink" to work correctly.
 
@@ -57,7 +67,7 @@ To break the gitlink:
 ### Set Upstream branch
 
 This will allow us to use the `make` commands below for pushing initially.
-Once you've made the initially changes that you want to the project, go ahead and:
+Once you've made the initial changes that you want to the project, go ahead and:
 
 - `git push -u origin master`
 
