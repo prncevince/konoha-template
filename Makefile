@@ -10,6 +10,7 @@ pages: build deploy cleandist
 
 index.html: index.Rmd
 	R --slave -e "rmarkdown::render('index.Rmd', 'xaringan::moon_reader')"
+	git commit -am "auto knit slides"
 
 build:
 	git checkout gh-pages

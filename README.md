@@ -1,6 +1,8 @@
 # Template for the Modernizing the M&A Workflow Series
 The [Xaringan](https://github.com/yihui/xaringan) slide show template for the Modernizing the M&A Workflow series ("mod-mAndA").
 
+Sample website found at https://esgovcloud.com/pages/mAndA/mod-mAndA-template.
+
 ## Description
 This repo contains:
 
@@ -28,6 +30,12 @@ To get started working on a new presentation:
 
 Initially, a few manual maintenance commands need to be run.
 
+They can either be run manually as described below OR via the script:
+
+- `setup.sh`
+
+in your own shell environment. You do need to change the `git@url` to the new presentation's repo.
+
 ### Checkout theme's `master` branch
 
 The git clone command clone's the theme submodule at the HEAD position. We need to checkout the master (making sure to `cd` back to the superproject's main directory for the next step).
@@ -47,11 +55,11 @@ You can delete the old commit history that went into building the template to st
 
 - `git checkout --orphan temp_branch`
 - `git add .`
-- `git commit -am "Create presentaton message"`
+- `git commit -am "Create presentation message"`
 - `git branch -D master`
 - `git branch -m master`
 
-## Break gitlink in gh-pages branch
+### Break gitlink in gh-pages branch
 
 A git submodule needs a "gitlink" to work correctly.
 
@@ -107,7 +115,7 @@ Knit Xaringan slides **& then** `make pages` step above:
 ## Theme Submodule Workflow
 
 The theme's repository:
-    
+
 - https://esgovcloud.com/mAndA/mod-mAndA-theme
 
 The theme is a [git submodule](https://git-scm.com/docs/gitsubmodules). The benefit of this is that it allows us to continually develop the theme throughout the creation of the series. A submodule is simply a repository inside a main super project/repository.
