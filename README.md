@@ -32,9 +32,16 @@ Initially, a few manual maintenance commands need to be run.
 
 They can either be run manually as described below OR via the script:
 
-- `setup.sh`
+- `./setup.sh`
 
 in your own shell environment. You do need to change the `git@url` to the new presentation's repo.
+
+### Activate reproducible R environment
+
+This activates the R environment. It assures that collaborators use the SAME R & package versions. See [renv](https://rstudio.github.io/renv/).
+
+- `Rscript --no-init-file -e 'renv::init()'`
+
 
 ### Checkout theme's `master` branch
 
