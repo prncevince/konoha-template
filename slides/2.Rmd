@@ -1,0 +1,9 @@
+class: split-two
+
+.column.bg-main1[.content.vtop-40.right[
+# dewd
+]]
+
+.column.bg-main2[.content.vbottom-40[
+# what
+]]
