@@ -1,6 +1,9 @@
 # This script sets up everything
 # Make sure to edit git@url below
 
+# activate initialize renv and restore from renv.lock 
+Rscript --no-init-file -e 'renv::init()'
+
 # checkout theme's master branch
 cd theme && git checkout master && cd ..
 
