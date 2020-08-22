@@ -59,13 +59,15 @@ library(anicon)
 # https://git-scm.com/book/en/v2/Git-Tools-Submodules
 ```
 
-layout: true
-name: theme
-
-<p class="my-footer"><span>modernizing the m&a workflow</span></p>
+```{r child="slides/theme.Rmd"}
+```
 
 ---
 ```{r child="slides/1-title.Rmd"}
+```
+
+---
+```{r child="slides/theme-series.Rmd"}
 ```
 
 ---

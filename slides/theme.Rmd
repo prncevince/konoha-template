@@ -1,0 +1,4 @@
+layout: true
+name: theme
+
+<p class="my-footer"><a href="https://esgovcloud.com/pages/mAndA/mod-mAndA"><span>modernizing the m&a workflow</span></a></p>

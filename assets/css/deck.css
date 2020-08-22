@@ -1,6 +1,14 @@
 /* Specific to THIS slide deck */
 /* contains overwrites & stuff */
 
+/* Presentation Header */
+p.my-header {
+  width: 4em;
+}
+p.my-header span {
+  right: 20px;
+}
+
 /* Series Map */
 
 .column:first-of-type .row.jamstack-3:hover,
