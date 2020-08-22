@@ -1,4 +1,5 @@
 layout: true
 template: theme
+name: theme
 
 <p class="my-header"><span>template</span></p>
