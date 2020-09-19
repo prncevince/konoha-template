@@ -8,7 +8,7 @@ all: knit build deploy cleandist
 
 pages: build deploy cleandist
 
-index.html: index.Rmd
+index.html: index.Rmd slides/*
 	R --slave -e "rmarkdown::render('index.Rmd', 'xaringan::moon_reader')"
 	git commit -am "auto knit slides"
 
