@@ -115,6 +115,8 @@ Build slides, Deploy site, and Cleanup gh-pages branch in 1 shot:
 
 - `make pages`
 
+**NOTE:** the 1st time this is run ... a `git reset --hard` may need to be ran due to error.
+
 Knit Xaringan slides **& then** `make pages` step above:
 
 - `make all`
