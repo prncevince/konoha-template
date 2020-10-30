@@ -115,7 +115,7 @@ Build slides, Deploy site, and Cleanup gh-pages branch in 1 shot:
 
 - `make pages`
 
-**NOTE:** the 1st time this is run ... a `git reset --hard` may need to be ran due to error.
+**NOTE:** the 1st time this is run ... a `git reset --hard` may need to be ran before `git checkout master` due to error. This could be fixed with a `git checkout -f master` ... however, we don't need to force this every single time ... just this 1st time. See [this SO post](https://stackoverflow.com/questions/22424142/error-when-changing-to-master-branch-my-local-changes-would-be-overwritten-by-c). This does show us that, once we `git checkout gh-pages` after committing changes to index.html on master, we may need to discard those auto changes when switching back to master. 
 
 Knit Xaringan slides **& then** `make pages` step above:
 
