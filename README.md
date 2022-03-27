@@ -1,7 +1,7 @@
-# Template for the Modernizing the M&A Workflow Series
-The [Xaringan](https://github.com/yihui/xaringan) slide show template for the Modernizing the M&A Workflow series ("mod-mAndA").
+# Xaringan Konoha Theme Template
+The [Xaringan](https://github.com/yihui/xaringan) slide show template for the [Konoha Theme](https://github.com/prncevince/konoha-theme).
 
-Sample website found at https://esgovcloud.com/pages/mAndA/mod-mAndA-template.
+Sample website found at https://prncevince.github.io/konoha-template.
 
 ## Description
 This repo contains:
@@ -10,7 +10,7 @@ This repo contains:
 - A build script for creating the directory schema for hosting static content on GitHub Pages
 - A Makefile to perform misc build tasks
     - Setting up GitHub Pages directories, PDF exports, cleaning GitHub Pages branch
-- The Xaringan ["theme"](https://github.com/yihui/xaringan/wiki/Themes) for the mod-mAndA series as a [git submodule](https://git-scm.com/docs/gitsubmodules)
+- A Xaringan ["theme"](https://github.com/yihui/xaringan/wiki/Themes) as a [git submodule](https://git-scm.com/docs/gitsubmodules)
     - CSS & webfonts for styling & creating the Slides
     - The remark.js library (i.e. the ["chakra"](https://cran.r-project.org/web/packages/xaringan/xaringan.pdf#Rfn.moon.Rul.reader.1))
 - All other static content that makes up the Xaringan html slides
@@ -18,13 +18,13 @@ This repo contains:
     - A [deck.css file](assets/css/deck.css) that is specific to the slide deck (i.e. not the theme)
     - Images
 
-The repo for the theme is located at [mAndA/mod-mAndA-theme](https://esgovcloud.com/mAndA/mod-mAndA-theme). To navigate to the specific commit that a presentation is using as it's theme, simply click on the "theme" directory in the repository and the link will navigate you to it.
+The repo for the theme is located at [prncevince/konoha-theme](https://github.com/prncevince/konoha-theme). To navigate to the specific commit that a presentation is using as it's theme, simply click on the "theme" directory in the repository and the link will navigate you to it.
 
 ## Getting Started
 
 To get started working on a new presentation:
 
-- `git clone --recursive git@esgovcloud.com:mAndA/mod-mAndA-template.git`
+- `git clone --recursive https://github.com/prncevince/konoha-template.git`
 
 ## Setup
 
