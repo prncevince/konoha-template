@@ -1,0 +1,439 @@
+/* TITLE SLIDE */
+.title-slide { /* dims of (1920 x 1279) AND (2206 x 2557) */
+    background-image: url('../../../assets/img/theme/logo.png'), url(../../../assets/img/theme/title.jpg);
+    background-size: 20%, cover;
+    background-position: 1em 90%, top;
+    padding: 1em;
+}
+/* title */
+.title-slide h1.title {
+    margin: 0;
+}
+/* author */
+.title-slide .author {
+    text-align: right;
+    position: absolute;
+    right: calc((20/35)*1em);
+    bottom: 0;
+    margin-bottom: 1em;
+}
+/* no number */
+.title-slide .remark-slide-number, .nonumber .remark-slide-number {
+    display: none;
+}
+/* topic icon  */
+img.topic {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+    width: 20%;
+}
+/* .title-slide .footnote {
+    right: 0;
+} */
+
+/* FOOTER */
+p.my-footer {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 1.1em;
+    width: 12em;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+p.my-footer span {
+    font-size: 10pt;
+    color: #fff;
+    position: absolute;
+    left: 20px;
+    bottom: 2px;
+    z-index: 1;
+}
+
+/* PRESENTATION HEADER */
+.my-header {
+    display: block;
+    background-color: #000;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 1.1em;
+    padding: 0;
+    margin: 0;
+    z-index: 1;
+}
+.my-header:hover {
+    background-color: rgb(255, 87, 34);
+}
+.my-header span {
+    font-size: 10pt;
+    color: #fff;
+    position: absolute;
+    top: 2px;
+    z-index: 1;
+}
+
+/* RESOURCES SLIDE */
+#slide-resources {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+/* no-classes */
+.nomargin {
+  margin: 0 !important;
+}
+.nomargin-ul ul {
+  margin: 0;
+}
+.nomargin-pre pre {
+  margin: 0;
+}
+.nomargin-h1 h1, .nomargin-h2 h2, .nomargin-h3 h3, .nomargin-h4 h4 {
+  margin: 0;
+}
+.nopadding-h1 h1, .nopadding-h2 h2, .nopadding-h3 h3, .nopadding-h4 h4 {
+  padding: 0;
+}
+.nooverflow {
+  margin-bottom: 5px;
+}
+.nofontsize p {
+  font-size: 0;
+}
+
+/* REMARK STYLING */
+.remark-slide-scaler {
+  overflow-y: auto;
+}
+.remark-slide-content {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* XARINGAN STYLING */
+.pull-left, .pull-right {
+  width: 49%;
+}
+
+/* NINJUTSU STYLING */
+.m1 .content {
+  margin: 1em;
+}
+.column {
+  overflow-y: auto;
+}
+
+/* VERTICAL CONTENT ALIGNMENT */
+/* from bottom */
+.vbottom-0  { position: relative; bottom: -100%; transform: translateY(-100%);}
+.vbottom-5  { position: relative; bottom: -95%; transform: translateY(-100%);}
+.vbottom-10 { position: relative; bottom: -90%; transform: translateY(-100%);}
+.vbottom-15 { position: relative; bottom: -85%; transform: translateY(-100%);}
+.vbottom-20 { position: relative; bottom: -80%; transform: translateY(-100%);}
+.vbottom-25 { position: relative; bottom: -75%; transform: translateY(-100%);}
+.vbottom-30 { position: relative; bottom: -70%; transform: translateY(-100%);}
+.vbottom-35 { position: relative; bottom: -65%; transform: translateY(-100%);}
+.vbottom-40 { position: relative; bottom: -60%; transform: translateY(-100%);}
+.vbottom-45 { position: relative; bottom: -55%; transform: translateY(-100%);}
+/* from top */
+.vtop-0  { position: relative; top: 0%;}
+.vtop-5  { position: relative; top: 5%;}
+.vtop-10 { position: relative; top: 10%;}
+.vtop-15 { position: relative; top: 15%;}
+.vtop-20 { position: relative; top: 20%;}
+.vtop-25 { position: relative; top: 25%;}
+.vtop-30 { position: relative; top: 30%;}
+.vtop-35 { position: relative; top: 35%;}
+.vtop-40 { position: relative; top: 40%;}
+.vtop-45 { position: relative; top: 45%;}
+/* padding bottom */
+.padding-bottom-0 {position: relative; padding-bottom: 0%;}
+.padding-bottom-5 {position: relative; padding-bottom: 5%;}
+.padding-bottom-10 {position: relative; padding-bottom: 10%;}
+.padding-bottom-15 {position: relative; padding-bottom: 15%;}
+.padding-bottom-20 {position: relative; padding-bottom: 20%;}
+.padding-bottom-25 {position: relative; padding-bottom: 25%;}
+.padding-bottom-30 {position: relative; padding-bottom: 30%;}
+.padding-bottom-35 {position: relative; padding-bottom: 35%;}
+.padding-bottom-40 {position: relative; padding-bottom: 40%;}
+.padding-bottom-45 {position: relative; padding-bottom: 45%;}
+/* padding top */
+.padding-top-0 {position: relative; padding-top: 0%;}
+.padding-top-5 {position: relative; padding-top: 5%;}
+.padding-top-10 {position: relative; padding-top: 10%;}
+.padding-top-15 {position: relative; padding-top: 15%;}
+.padding-top-20 {position: relative; padding-top: 20%;}
+.padding-top-25 {position: relative; padding-top: 25%;}
+.padding-top-30 {position: relative; padding-top: 30%;}
+.padding-top-35 {position: relative; padding-top: 35%;}
+.padding-top-40 {position: relative; padding-top: 40%;}
+.padding-top-45 {position: relative; padding-top: 45%;}
+/* margin bottom */
+.margin-bottom-0 {position: relative; margin-bottom: 0%;}
+.margin-bottom-5 {position: relative; margin-bottom: 5%;}
+.margin-bottom-10 {position: relative; margin-bottom: 10%;}
+.margin-bottom-15 {position: relative; margin-bottom: 15%;}
+.margin-bottom-20 {position: relative; margin-bottom: 20%;}
+.margin-bottom-25 {position: relative; margin-bottom: 25%;}
+.margin-bottom-30 {position: relative; margin-bottom: 30%;}
+.margin-bottom-35 {position: relative; margin-bottom: 35%;}
+.margin-bottom-40 {position: relative; margin-bottom: 40%;}
+.margin-bottom-45 {position: relative; margin-bottom: 45%;}
+/* margin top */
+.margin-top-0 {position: relative; margin-top: 0%;}
+.margin-top-5 {position: relative; margin-top: 5%;}
+.margin-top-10 {position: relative; margin-top: 10%;}
+.margin-top-15 {position: relative; margin-top: 15%;}
+.margin-top-20 {position: relative; margin-top: 20%;}
+.margin-top-25 {position: relative; margin-top: 25%;}
+.margin-top-30 {position: relative; margin-top: 30%;}
+.margin-top-35 {position: relative; margin-top: 35%;}
+.margin-top-40 {position: relative; margin-top: 40%;}
+.margin-top-45 {position: relative; margin-top: 45%;}
+
+
+/* top margin */
+.remark-slide-content .vmiddle h2, .remark-slide-content .vmiddle h3, .remark-slide-content .vmiddle h4, .remark-slide-content .vmiddle h5, .remark-slide-content .vmiddle h6 {margin-top: 0;}
+.remark-slide-content .vbottom-0 h1, .remark-slide-content .vbottom-0 h2, .remark-slide-content .vbottom-0 h3, .remark-slide-content .vbottom-0 h4, .remark-slide-content .vbottom-0 h5, .remark-slide-content .vbottom-0 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-5 h1, .remark-slide-content .vbottom-5 h2, .remark-slide-content .vbottom-5 h3, .remark-slide-content .vbottom-5 h4, .remark-slide-content .vbottom-5 h5, .remark-slide-content .vbottom-5 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-10 h1, .remark-slide-content .vbottom-10 h2, .remark-slide-content .vbottom-10 h3, .remark-slide-content .vbottom-10 h4, .remark-slide-content .vbottom-10 h5, .remark-slide-content .vbottom-10 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-15 h1, .remark-slide-content .vbottom-15 h2, .remark-slide-content .vbottom-15 h3, .remark-slide-content .vbottom-15 h4, .remark-slide-content .vbottom-15 h5, .remark-slide-content .vbottom-15 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-20 h1, .remark-slide-content .vbottom-20 h2, .remark-slide-content .vbottom-20 h3, .remark-slide-content .vbottom-20 h4, .remark-slide-content .vbottom-20 h5, .remark-slide-content .vbottom-20 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-25 h1, .remark-slide-content .vbottom-25 h2, .remark-slide-content .vbottom-25 h3, .remark-slide-content .vbottom-25 h4, .remark-slide-content .vbottom-25 h5, .remark-slide-content .vbottom-25 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-30 h1, .remark-slide-content .vbottom-30 h2, .remark-slide-content .vbottom-30 h3, .remark-slide-content .vbottom-30 h4, .remark-slide-content .vbottom-30 h5, .remark-slide-content .vbottom-30 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-35 h1, .remark-slide-content .vbottom-35 h2, .remark-slide-content .vbottom-35 h3, .remark-slide-content .vbottom-35 h4, .remark-slide-content .vbottom-35 h5, .remark-slide-content .vbottom-35 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-40 h1, .remark-slide-content .vbottom-40 h2, .remark-slide-content .vbottom-40 h3, .remark-slide-content .vbottom-40 h4, .remark-slide-content .vbottom-40 h5, .remark-slide-content .vbottom-40 h6 {margin-top: 0;}
+.remark-slide-content .vbottom-45 h1, .remark-slide-content .vbottom-45 h2, .remark-slide-content .vbottom-45 h3, .remark-slide-content .vbottom-45 h4, .remark-slide-content .vbottom-45 h5, .remark-slide-content .vbottom-45 h6 {margin-top: 0;}
+.remark-slide-content .vtop-0 h1, .remark-slide-content .vtop-0 h2, .remark-slide-content .vtop-0 h3, .remark-slide-content .vtop-0 h4, .remark-slide-content .vtop-0 h5, .remark-slide-content .vtop-0 h6 {margin-top: 0;}
+.remark-slide-content .vtop-5 h1, .remark-slide-content .vtop-5 h2, .remark-slide-content .vtop-5 h3, .remark-slide-content .vtop-5 h4, .remark-slide-content .vtop-5 h5, .remark-slide-content .vtop-5 h6 {margin-top: 0;}
+.remark-slide-content .vtop-10 h1, .remark-slide-content .vtop-10 h2, .remark-slide-content .vtop-10 h3, .remark-slide-content .vtop-10 h4, .remark-slide-content .vtop-10 h5, .remark-slide-content .vtop-10 h6 {margin-top: 0;}
+.remark-slide-content .vtop-15 h1, .remark-slide-content .vtop-15 h2, .remark-slide-content .vtop-15 h3, .remark-slide-content .vtop-15 h4, .remark-slide-content .vtop-15 h5, .remark-slide-content .vtop-15 h6 {margin-top: 0;}
+.remark-slide-content .vtop-20 h1, .remark-slide-content .vtop-20 h2, .remark-slide-content .vtop-20 h3, .remark-slide-content .vtop-20 h4, .remark-slide-content .vtop-20 h5, .remark-slide-content .vtop-20 h6 {margin-top: 0;}
+.remark-slide-content .vtop-25 h1, .remark-slide-content .vtop-25 h2, .remark-slide-content .vtop-25 h3, .remark-slide-content .vtop-25 h4, .remark-slide-content .vtop-25 h5, .remark-slide-content .vtop-25 h6 {margin-top: 0;}
+.remark-slide-content .vtop-30 h1, .remark-slide-content .vtop-30 h2, .remark-slide-content .vtop-30 h3, .remark-slide-content .vtop-30 h4, .remark-slide-content .vtop-30 h5, .remark-slide-content .vtop-30 h6 {margin-top: 0;}
+.remark-slide-content .vtop-35 h1, .remark-slide-content .vtop-35 h2, .remark-slide-content .vtop-35 h3, .remark-slide-content .vtop-35 h4, .remark-slide-content .vtop-35 h5, .remark-slide-content .vtop-35 h6 {margin-top: 0;}
+.remark-slide-content .vtop-40 h1, .remark-slide-content .vtop-40 h2, .remark-slide-content .vtop-40 h3, .remark-slide-content .vtop-40 h4, .remark-slide-content .vtop-40 h5, .remark-slide-content .vtop-40 h6 {margin-top: 0;}
+.remark-slide-content .vtop-45 h1, .remark-slide-content .vtop-45 h2, .remark-slide-content .vtop-45 h3, .remark-slide-content .vtop-45 h4, .remark-slide-content .vtop-45 h5, .remark-slide-content .vtop-45 h6 {margin-top: 0;}
+
+/* HORIZONTAL CONTENT ALIGNMENT */
+/* lists stay left, even in right/centered blocks */
+ul, ol {
+  text-align: left;
+}
+/* from left */
+.hleft-0 { position: relative; left: 0%;}
+.hleft-5 { position: relative; left: 5%;}
+.hleft-10 { position: relative; left: 10%;}
+.hleft-15 { position: relative; left: 15%;}
+.hleft-20 { position: relative; left: 20%;}
+.hleft-25 { position: relative; left: 25%;}
+.hleft-30 { position: relative; left: 30%;}
+.hleft-35 { position: relative; left: 35%;}
+.hleft-40 { position: relative; left: 40%;}
+.hleft-45 { position: relative; left: 45%;}
+/* from right */
+.hright-0 { position: relative; right: 0%;}
+.hright-5 { position: relative; right: 5%;}
+.hright-10 { position: relative; right: 10%;}
+.hright-15 { position: relative; right: 15%;}
+.hright-20 { position: relative; right: 20%;}
+.hright-25 { position: relative; right: 25%;}
+.hright-30 { position: relative; right: 30%;}
+.hright-35 { position: relative; right: 35%;}
+.hright-40 { position: relative; right: 40%;}
+.hright-45 { position: relative; right: 45%;}
+/* padding left */
+.padding-left-0 {position: relative; padding-left: 0%;}
+.padding-left-5 {position: relative; padding-left: 5%;}
+.padding-left-10 {position: relative; padding-left: 10%;}
+.padding-left-15 {position: relative; padding-left: 15%;}
+.padding-left-20 {position: relative; padding-left: 20%;}
+.padding-left-25 {position: relative; padding-left: 25%;}
+.padding-left-30 {position: relative; padding-left: 30%;}
+.padding-left-35 {position: relative; padding-left: 35%;}
+.padding-left-40 {position: relative; padding-left: 40%;}
+.padding-left-45 {position: relative; padding-left: 45%;}
+/* padding right */
+.padding-right-0 {position: relative; padding-right: 0%;}
+.padding-right-5 {position: relative; padding-right: 5%;}
+.padding-right-10 {position: relative; padding-right: 10%;}
+.padding-right-15 {position: relative; padding-right: 15%;}
+.padding-right-20 {position: relative; padding-right: 20%;}
+.padding-right-25 {position: relative; padding-right: 25%;}
+.padding-right-30 {position: relative; padding-right: 30%;}
+.padding-right-35 {position: relative; padding-right: 35%;}
+.padding-right-40 {position: relative; padding-right: 40%;}
+.padding-right-45 {position: relative; padding-right: 45%;}
+/* margin left */
+.margin-left-0 {position: relative; margin-left: 0%;}
+.margin-left-5 {position: relative; margin-left: 5%;}
+.margin-left-10 {position: relative; margin-left: 10%;}
+.margin-left-15 {position: relative; margin-left: 15%;}
+.margin-left-20 {position: relative; margin-left: 20%;}
+.margin-left-25 {position: relative; margin-left: 25%;}
+.margin-left-30 {position: relative; margin-left: 30%;}
+.margin-left-35 {position: relative; margin-left: 35%;}
+.margin-left-40 {position: relative; margin-left: 40%;}
+.margin-left-45 {position: relative; margin-left: 45%;}
+/* margin right */
+.margin-right-0 {position: relative; margin-right: 0%;}
+.margin-right-5 {position: relative; margin-right: 5%;}
+.margin-right-10 {position: relative; margin-right: 10%;}
+.margin-right-15 {position: relative; margin-right: 15%;}
+.margin-right-20 {position: relative; margin-right: 20%;}
+.margin-right-25 {position: relative; margin-right: 25%;}
+.margin-right-30 {position: relative; margin-right: 30%;}
+.margin-right-35 {position: relative; margin-right: 35%;}
+.margin-right-40 {position: relative; margin-right: 40%;}
+.margin-right-45 {position: relative; margin-right: 45%;}
+
+/* IMAGES */
+/* by default, images are wrapped in <p> by remark.js when on newline after `[`
+- When positioning images in a column/row block containing multiple items,
+row/height attributes might be the only method of sizing the <img>
+- This property is for images that are the ONLY element in their column/row block OR container
+- In practice this is for the <p><span><img></img></span></p> case
+This is used as such (creates a <span> container for <img>):
+    .img-cover.content[![](assets/img/topic.png)]
+Confusing b/c <p> is created when image is on newline after `[`
+However, there is behavior where <p><span><img></img></span></p> occurs, and this is for THAT occurence
+*/
+/* image sizing is performed using the max-width property*/
+div p {
+  display: inline;
+}
+/* The flip box container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
+.flip-box {
+  background-color: transparent; /* does this do anything? */
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+/* This container is needed to position the front and back side */
+.flip-box-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1.2s;
+  transform-style: preserve-3d;
+}
+/* Do a horizontal flip when you move the mouse over the flip box container */
+.flip-box:hover .flip-box-inner {
+  transform: rotateY(180deg);
+}
+/* Position the front and back side */
+.flip-box-front, .flip-box-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden; /* Chrome, Safari */
+}
+/* Style the front side */
+.flip-box-front {
+  transform: rotateY(0deg);
+}
+/* Style the back side */
+.flip-box-back {
+  transform: rotateY(180deg);
+}
+/* top/bottom margin */
+.flip-box-front .vmiddle h1, .flip-box-front .vmiddle h2, .flip-box-front .vmiddle h3, .flip-box-front .vmiddle h4, 
+.flip-box-back .vmiddle h1, .flip-box-back .vmiddle h2, .flip-box-back .vmiddle h3, .flip-box-back .vmiddle h4 {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+/* Cover Text */
+.text-cover {
+  position: absolute;
+}
+.text-cover-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+/* iFRAMES */
+.imax-slide, .imax-mac, .imax-video {
+  overflow: hidden;
+  position: relative;
+}
+.imax-video {
+  /* Calculated from the aspect ration of the content (in case of 16:9 it is 9/16= 0.5625) */
+  padding-top: 56.25%;
+}
+.imax-mac {
+  /* Calculated from the aspect ration of a MacBook Pro Screen (in case of 2560:1600 it is 16/25.6= 0.625) */
+  padding-top: 62.5%;
+}
+.imax-slide {
+  /* Chosen 16:10 aspect ratio 10/16 = 0.625 */
+  padding-top: 62.5%;
+  display: contents;
+}
+.imax-video iframe, .imax-mac iframe, .imax-slide iframe {
+   border: 0;
+   height: 100%;
+   left: 0;
+   position: absolute;
+   top: 0;
+   width: 100%;
+}
+
+/* LINKS */
+a {
+  color: black;
+  text-decoration: none;
+}
+a[href*="http"] {
+  background: url('../../../assets/img/theme/external-link.svg') no-repeat 100% 0;
+  background-size: 0.45em 0.45em;
+  padding-right: 0.5em;
+  /* -webkit-mask: url('../../assets/img/theme/external-link.svg') no-repeat 100% 0;
+  mask: url('../../assets/img/theme/external-link.svg') no-repeat 100% 0;
+  mask-size: 0.45em 0.45em;
+  background-color: #000; */
+}
+a:hover, a > code:hover, a > span:hover {
+  color: #acacac;
+  /* background-color: #acacac; */
+}
+a:active, a > code:active, a > span:active {
+  color: #aaff00;
+}
+.flip-box a {
+  padding: 0;
+}
+/* hover effect */
+.inverse .flip-box a:hover .flip-box-front {
+  box-shadow: inset 0 0 10px 10px rgba(0, 0, 0, 0.5);
+}
+.flip-box a:hover .flip-box-front {
+  box-shadow: inset 0 0 10px 10px rgba(255, 255, 255, 0.5);
+}
+
+/* SERIES MAP */
+.series-map a {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  padding: 0;
+}
+.series-map a:link, .series-map a:visited {
+  color: white;
+}
+.series-map a:active {
+  color: #aaff00;
+}
+

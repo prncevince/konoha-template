@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css?family=Advent+Pro&display=swap');
+
+/* headers & body */
+h4 {
+  font-size: 1em;
+  font-weight: bold;
+}
+h1, h2, h3, h4 {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+body {
+  font-size: 1em;
+}
+
+/* scaling */
+.x25 {font-size: 25%;}
+.x50 {font-size: 50%;}
+.x75 {font-size: 75%;}
+.x100 {font-size: 100%;}
+.x125 {font-size: 125%;}
+.x150 {font-size: 150%;}
+.x175 {font-size: 175%;}
+.x200 {font-size: 200%;}
+.x225 {font-size: 225%;}
+.x250 {font-size: 250%;}
+.x275 {font-size: 275%;}
+.x300 {font-size: 300%;}
+.x400 {font-size: 400%;}
+.x500 {font-size: 500%;}
+
+/* scaling from ninjutsu.css */
+.font_small {font-size: 0.5em;}
+.font_medium {font-size: 1.25em;}
+.font_large {font-size: 1.5em;}
+.font1 {font-size: 1em;}
+.font2 {font-size: 2em;}
+.font3 {font-size: 3em;}
+.font4 {font-size: 4em;}
+.font5 {font-size: 5em;}
+
+.advent-pro {
+/* advent-pro-regular - latin */
+    font-family: 'Advent Pro';
+    font-style: normal;
+    font-weight: 400;
+}
+
+.advent-pro-ital {
+/* advent-pro-regular - latin */
+    font-family: 'Advent Pro';
+    font-style: italic;
+    font-weight: 400;
+}
+
+.remark-inline-code {
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+a > .remark-inline-code {
+  color: rgb(249, 38, 114);
+}
