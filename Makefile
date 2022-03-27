@@ -15,7 +15,7 @@ index.html: index.Rmd slides/*
 build:
 	git checkout gh-pages
 	git diff-index --quiet HEAD || git commit -am "Update theme"
-	git merge --no-edit -X theirs master
+	git merge --no-edit -X theirs main
 	R --slave -f build.R
 	git add .
 	git commit -am "Setup GitHub Pages"
@@ -25,7 +25,7 @@ deploy:
 
 cleandist:
 	git revert --no-edit HEAD
-	git checkout master
+	git checkout main
 
 extra.html: extra.Rmd
 	R --slave -e "rmarkdown::render('extra.Rmd', 'xaringan::moon_reader')"
