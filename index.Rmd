@@ -19,10 +19,14 @@ output:
       countIncrementalSlides: false
       navigation:
         scroll: false
+    anchor_sections: false
+    includes:
+      after_body: [theme/usr/js/alt-title.html, theme/usr/js/tile-view-toggle.html]
 ---
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
+xaringanExtra::use_tile_view()
 knitr::opts_chunk$set(fig.path = "assets/img/")
 library(anicon)
 ```

@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="author" content="The Authors Names … just meta-data" />
     <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
+    <script src="libs/tile-view/tile-view.js"></script>
     <link rel="stylesheet" href="theme/src/css/kunoichi.css" type="text/css" />
     <link rel="stylesheet" href="theme/src/css/ninjutsu.css" type="text/css" />
     <link rel="stylesheet" href="theme/src/css/ninpo.css" type="text/css" />
@@ -152,6 +154,80 @@ if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
   }
   preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
 })(document);</script>
+<script>(function() {
+var img, imgs = document.getElementsByTagName('img');
+for (var i = 0; i < imgs.length; i++) {
+img = imgs[i];
+if (!img.title) img.title = img.alt;
+}
+})();</script>
+<script>(function(){
+const ready = function (fn) {
+const completed = () => {
+document.removeEventListener('DOMContentLoaded', completed)
+window.removeEventListener('load', completed)
+fn()
+}
+if (document.readyState !== 'loading') {
+setTimeout(fn)
+} else {
+document.addEventListener('DOMContentLoaded', completed)
+window.addEventListener('load', completed)
+}
+}
+ready(function(){
+const toggleElement = el => {
+el.style.display = el.style.display === 'none' ? '' : 'none'
+}
+const remarkSlideShow = document.querySelector('div.remark-slides-area')
+let tileView = document.querySelector('div.remark__tile-view')
+const blockEvent = ev => ev.stopPropagation()
+const blockScaling = function (ev) {
+if (ev.controlKey || ev.metaKey) {
+if (ev.key === '=' || ev.key === '-') {
+ev.preventDefault()
+console.log('window scaling is not allowed inside the tile overview')
+}
+}
+}
+const tileVars = {currentSlideIdx: slideshow.getCurrentSlideIndex()}
+const toggleTileView = function () {
+toggleElement(tileView)
+toggleElement(remarkSlideShow)
+if (tileView.style.display === 'none') {
+slideshow.gotoSlide(tileVars.currentSlideIdx + 1)
+tileView.removeEventListener('mousewheel', blockEvent)
+tileView.removeEventListener('DOMMouseScroll', blockEvent)
+console.log('removing blockScaling')
+document.removeEventListener('keydown', blockScaling)
+} else {
+tileVars.currentSlideIdx = slideshow.getCurrentSlideIndex()
+const tiles = tileView.querySelectorAll('.remark__tile-view__tile');
+[...tiles].forEach((tile, idx) => {
+tile.classList.toggle(
+'remark__tile-view__tile--seen',
+idx < tileVars.currentSlideIdx
+)
+tile.classList.toggle(
+'remark__tile-view__tile--current',
+idx === tileVars.currentSlideIdx
+)
+})
+tiles[tileVars.currentSlideIdx].scrollIntoView({
+behavior: 'smooth',
+block: 'center'
+})
+tileView.addEventListener('mousewheel', blockEvent)
+tileView.addEventListener('DOMMouseScroll', blockEvent)
+console.log('adding blockScaling')
+document.addEventListener('keydown', blockScaling)
+}
+}
+document.getElementsByClassName('my-header').forEach(
+e => e.addEventListener("click", toggleTileView)
+);
+})
+})()</script>
 
 <script>
 slideshow._releaseMath = function(el) {
