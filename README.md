@@ -68,9 +68,11 @@ You can delete the old commit history that went into building the template to st
 
 ### Break gitlink in gh-pages branch
 
+Originally, this template was created to work with a theme stored within a private repo. Thus, breaking the gitlink is only necessary if your theme is stored in a private repo.  
+
 A git submodule needs a "gitlink" to work correctly.
 
-However, to perform the build procedure for these slides, the gitlink must be broken in the `gh-pages` branch so that the GitHub Pages build procedure cannot access the theme repository. When the gitlink is available, GitHub Pages is unable to clone it during the build process because the theme repository is a private repo (if it was public, it WOULD be able to clone it). Thus, we copy files to a distribution directory in our build step to handle this. All that's left to do is to break the gitlink.
+To perform the build procedure for these slides, the gitlink must be broken in the `gh-pages` branch so that the GitHub Pages build procedure cannot access the theme repository. When the gitlink is available, GitHub Pages is unable to clone it during the build process because the theme repository is a private repo (if it was public, it WOULD be able to clone it). Thus, we copy files to a distribution directory in our build step to handle this. All that's left to do is to break the gitlink.
 
 To break the gitlink:
 
