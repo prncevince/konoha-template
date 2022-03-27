@@ -66,9 +66,15 @@ You can delete the old commit history that went into building the template to st
 - `git branch -D master`
 - `git branch -m master`
 
+### Create gh-pages branch
+
+This is the branch that GitHub uses to server the website.
+
+- `git checkout -b gh-pages`
+
 ### Break gitlink in gh-pages branch
 
-Originally, this template was created to work with a theme stored within a private repo. Thus, breaking the gitlink is only necessary if your theme is stored in a private repo.  
+Originally, this template was created to work with a theme stored within a private repo. Thus, breaking the gitlink is only necessary if your theme is stored in a private repo.
 
 A git submodule needs a "gitlink" to work correctly.
 
@@ -76,7 +82,7 @@ To perform the build procedure for these slides, the gitlink must be broken in t
 
 To break the gitlink:
 
-- `git checkout -b gh-pages`
+- `git checkout gh-pages`
 - `git rm .gitmodules`
 - `git commit -m "Remove gitlink to theme submodule"`
 - `git checkout master`
