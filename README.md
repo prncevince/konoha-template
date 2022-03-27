@@ -1,5 +1,5 @@
 # Xaringan Konoha Theme Template
-The [Xaringan](https://github.com/yihui/xaringan) slide show template for the [Konoha Theme](https://github.com/prncevince/konoha-theme).
+A [Xaringan](https://github.com/yihui/xaringan) template for the [Konoha Theme](https://github.com/prncevince/konoha-theme).
 
 Sample website found at https://prncevince.github.io/konoha-template.
 
